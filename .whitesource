@@ -7,10 +7,6 @@
     "enableLicenseViolations": true,
     "enableIaC": true
   },
-  "scanSettingsSAST": {
-    "enableScan": "true",
-    "baseBranches": ["master","develop"]
-  },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
