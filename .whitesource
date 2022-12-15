@@ -3,10 +3,13 @@
     "configMode": "AUTO",
     "configExternalURL": "",
     "projectToken": "",
-    "baseBranches": [],
+    "baseBranches": ["master","develop"],
     "enableLicenseViolations": true,
-    "enableIaC": true,
-    "enableSAST": true
+    "enableIaC": true
+  },
+  "scanSettingsSAST": {
+    "enableScan": "true",
+    "baseBranches": ["master","develop"]
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
