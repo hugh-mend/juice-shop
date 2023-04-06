@@ -101,3 +101,5 @@ Coink (CoinkWang), Kamil Vavra (vavkamil), Phakphum Visetnut (phakphum_visetnut)
 ## Stargazers (over time)
 
 [![Stargazers over time](https://starchart.cc/bkimminich/juice-shop.svg)](https://starchart.cc/bkimminich/juice-shop)
+
+
