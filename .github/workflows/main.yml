@@ -34,7 +34,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install --only=prod
+        run: npm install --only=prod -ignore-scripts
         
       - name: Mend CLI Scan
         env:
