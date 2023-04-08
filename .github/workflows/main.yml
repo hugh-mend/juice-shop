@@ -44,7 +44,7 @@ jobs:
         run: |
           echo Downloading Mend CLI
           curl https://downloads.mend.io/production/unified/latest/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
-          mend sca -u
+          mend sca -u; cat /home/runner/.mend/sca/*
           
       - name: Mend CLI SAST Scan
         env:
