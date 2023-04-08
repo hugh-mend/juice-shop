@@ -37,19 +37,23 @@ jobs:
         run: npm install --only=prod -ignore-scripts
         
       - name: Mend CLI SCA Scan
-#        env:
-#          MEND_EMAIL: ${{secrets.EMAIL}}
-#          MEND_USER_KEY: ${{secrets.USERKEY}}
-#          MEND_URL: ${{secrets.URL}}
+        env:
+          MEND_EMAIL: ${{secrets.EMAIL}}
+          MEND_USER_KEY: ${{secrets.USERKEY}}
+          MEND_URL: ${{secrets.URL}}
+          MEND_SAST_ORGANIZATION: ${{secrets.SAST_ORGANIZATION}}
+          MEND_SAST_API_TOKEN: ${{secrets.SAST_API_TOKEN}}
+          MEND_SAST_SERVER_URL: ${{secrets.SAST_SERVER_URL}}
         run: |
           echo Downloading Mend CLI
           curl https://downloads.mend.io/production/unified/latest/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
           mend sca -u 
+          mend sast
           
-      - name: Mend CLI SAST Scan
+#      - name: Mend CLI SAST Scan
 #        env:
 #          MEND_SAST_ORGANIZATION: ${{secrets.SAST_ORGANIZATION}}
 #          MEND_SAST_API_TOKEN: ${{secrets.SAST_API_TOKEN}}
 #          MEND_SAST_SERVER_URL: ${{secrets.SAST_SERVER_URL}}
-        run: |
-          mend sast
+#        run: |
+#          mend sast
