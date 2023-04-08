@@ -53,3 +53,5 @@ jobs:
           MEND_SAST_SERVER_URL: ${{secrets.SAST_SERVER_URL}}
         run: |
           mend sast
+          
+          
