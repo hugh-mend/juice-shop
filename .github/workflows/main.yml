@@ -37,7 +37,7 @@ jobs:
         run: npm install --only=prod -ignore-scripts
         
       - name: Mend CLI SCA Scan
-        env:
+#        env:
 #          MEND_EMAIL: ${{secrets.EMAIL}}
 #          MEND_USER_KEY: ${{secrets.USERKEY}}
 #          MEND_URL: ${{secrets.URL}}
@@ -47,7 +47,7 @@ jobs:
           mend sca -u 
           
       - name: Mend CLI SAST Scan
-        env:
+#        env:
 #          MEND_SAST_ORGANIZATION: ${{secrets.SAST_ORGANIZATION}}
 #          MEND_SAST_API_TOKEN: ${{secrets.SAST_API_TOKEN}}
 #          MEND_SAST_SERVER_URL: ${{secrets.SAST_SERVER_URL}}
