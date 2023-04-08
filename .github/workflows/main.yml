@@ -38,14 +38,14 @@ jobs:
         
       - name: Mend CLI SCA Scan
         env:
-          MEND_EMAIL: ${{secrets.EMAIL}}
+          MEND_EMAIL: hugh.cushing@whitesourcesoftware.com
           MEND_USER_KEY: ${{secrets.USERKEY}}
-          MEND_URL: ${{secrets.URL}}
-          MEND_SAST_ORGANIZATION: ${{secrets.SAST_ORGANIZATION}}
+          MEND_URL: https://saas.mend.io
+          MEND_SAST_ORGANIZATION: fed2c3fb-293d-4b17-9ce1-0e9bbe19fa88
           MEND_SAST_API_TOKEN: ${{secrets.SAST_API_TOKEN}}
-          MEND_SAST_SERVER_URL: ${{secrets.SAST_SERVER_URL}}
+          MEND_SAST_SERVER_URL: saas.mend.io/sast
         run: |
-          echo Downloading Mend CLI
+          echo Downloading Mend CLI from other place
           curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
           mend sca -u --no-color
           mend sast --no-color --no-progress
