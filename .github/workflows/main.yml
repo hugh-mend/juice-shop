@@ -46,7 +46,7 @@ jobs:
           MEND_SAST_SERVER_URL: ${{secrets.SAST_SERVER_URL}}
         run: |
           echo Downloading Mend CLI
-          echo curl https://downloads.mend.io/production/unified/latest/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
+          echo "curl https://downloads.mend.io/production/unified/latest/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend"
           curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
           mend sca -u --no-color
           mend sast --no-color --no-progress
